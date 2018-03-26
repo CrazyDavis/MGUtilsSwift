@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MGUtilsSwift"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "All Utils"
 
   # This description is used to generate tags and improve search results.
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "UIKit"
+  s.framework  = "UKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -134,9 +134,9 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.s.dependency 'CLImagePickerTool'
-  s.s.dependency 'SwiftyJSON'
-  s.s.dependency 'ReachabilitySwift'
-  s.s.dependency 'Toast-Swift', '~> 3.0.1'
+  s.dependency 'SwiftyJSON'
+  s.dependency 'Toast-Swift', '~> 3.0.1'
+  s.dependency 'CLImagePickerTool'
+  s.dependency 'ReachabilitySwift'
 
 end
