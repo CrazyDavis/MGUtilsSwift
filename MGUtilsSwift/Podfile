@@ -6,6 +6,7 @@ target 'MGUtilsSwift' do
   use_frameworks!
 
   # Pods for MGUtilsSwift
+  pod 'Kingfisher', '~> 4.0'
   pod 'CLImagePickerTool'
   pod 'SwiftyJSON'
   pod 'ReachabilitySwift'

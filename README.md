@@ -3,4 +3,4 @@ All Utils
 
 使用方式:  
 
-pod 'MGUtilsSwift', '~> 0.0.4'
+pod 'MGUtilsSwift', '~> 0.0.5'
