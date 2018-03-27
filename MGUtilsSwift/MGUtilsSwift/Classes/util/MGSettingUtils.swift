@@ -10,6 +10,8 @@ import Foundation
 
 public class MGSettingUtils {
 
+    private init() {}
+
     public static func setSetting(_ key: String, value: Any?) {
         if let v = value {
             UserDefaults.standard.set(v, forKey: key)

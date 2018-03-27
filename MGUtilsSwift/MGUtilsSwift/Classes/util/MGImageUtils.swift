@@ -13,6 +13,8 @@ import UIKit
 //將圖檔轉為字串, 或者字串轉為圖檔
 public class MGImageUtils {
 
+    private init() {}
+
     public static func toBase64String(_ image: UIImage) -> String? {
         //Now use image to create into NSData format
         let imageData = UIImagePNGRepresentation(image)

@@ -10,6 +10,8 @@ import Foundation
 
 public class MGFileUtils {
 
+    private init() {}
+
     //預設的儲存資料夾, 所有api也都存在這裡
     public static var storageDir: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 

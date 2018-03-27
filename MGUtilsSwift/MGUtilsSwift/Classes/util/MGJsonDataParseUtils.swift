@@ -11,6 +11,9 @@ import SwiftyJSON
 
 public class MGJsonDataParseUtils {
 
+    private init() {}
+
+
     //反序列化, 將json變成物件
     public static func deserialize(_ jsonString: String, deserialize: MGJsonDeserializeDelegate.Type) -> AnyObject? {
         guard let json = converToJSON(jsonString) else {
