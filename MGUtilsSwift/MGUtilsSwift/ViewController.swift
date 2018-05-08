@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var previewView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+//        let utils = MGCameraUtils()
+//        utils.prepare { err in
+//            if err == nil { try? utils.displayPreview(self.previewView) }
+//            else {
+//                print("開啟相機錯誤: \(err!.localizedDescription)")
+//                MGToastUtils.show("開啟相機錯誤 \(err!.localizedDescription)")
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
