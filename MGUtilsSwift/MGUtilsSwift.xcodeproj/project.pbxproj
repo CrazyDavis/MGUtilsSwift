@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7E3D9553497F2389593E5D4B /* Pods_MGUtilsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6DE947E263015B667FD005 /* Pods_MGUtilsSwift.framework */; };
+		B82651C320A159D900FF4BE7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B82651C220A159D900FF4BE7 /* README.md */; };
+		B82651C520A159DF00FF4BE7 /* MGUtilsSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B82651C420A159DE00FF4BE7 /* MGUtilsSwift.podspec */; };
+		B82A0BC82089C5FA00766395 /* MGCameraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A0BC72089C5FA00766395 /* MGCameraUtils.swift */; };
 		B8B8BC682068E4D2005E5906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC672068E4D2005E5906 /* AppDelegate.swift */; };
 		B8B8BC6A2068E4D2005E5906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC692068E4D2005E5906 /* ViewController.swift */; };
 		B8B8BC6D2068E4D2005E5906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B8BC6B2068E4D2005E5906 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		1B6DE947E263015B667FD005 /* Pods_MGUtilsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGUtilsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE34CA24547058F51250E38 /* Pods-MGUtilsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGUtilsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGUtilsSwift/Pods-MGUtilsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		6E764397FBEE64105F2DA9E4 /* Pods-MGUtilsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGUtilsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGUtilsSwift/Pods-MGUtilsSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B82651C220A159D900FF4BE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		B82651C420A159DE00FF4BE7 /* MGUtilsSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MGUtilsSwift.podspec; path = ../../MGUtilsSwift.podspec; sourceTree = "<group>"; };
+		B82A0BC72089C5FA00766395 /* MGCameraUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCameraUtils.swift; sourceTree = "<group>"; };
 		B8B8BC642068E4D2005E5906 /* MGUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8BC672068E4D2005E5906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8B8BC692068E4D2005E5906 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,8 @@
 				B8B8BC6E2068E4D2005E5906 /* Assets.xcassets */,
 				B8B8BC702068E4D2005E5906 /* LaunchScreen.storyboard */,
 				B8B8BC732068E4D2005E5906 /* Info.plist */,
+				B82651C220A159D900FF4BE7 /* README.md */,
+				B82651C420A159DE00FF4BE7 /* MGUtilsSwift.podspec */,
 				B8B8BC792068E501005E5906 /* Classes */,
 			);
 			path = MGUtilsSwift;
@@ -142,6 +150,7 @@
 				B8B8BC862068E501005E5906 /* MGTimerUtils.swift */,
 				B8B8BC872068E501005E5906 /* MGToastUtils.swift */,
 				B8B8BC882068E501005E5906 /* MGTransformUtils.swift */,
+				B82A0BC72089C5FA00766395 /* MGCameraUtils.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -209,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8B8BC722068E4D2005E5906 /* LaunchScreen.storyboard in Resources */,
+				B82651C520A159DF00FF4BE7 /* MGUtilsSwift.podspec in Resources */,
 				B8B8BC6F2068E4D2005E5906 /* Assets.xcassets in Resources */,
+				B82651C320A159D900FF4BE7 /* README.md in Resources */,
 				B8B8BC6D2068E4D2005E5906 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +310,7 @@
 				B8B8BC952068E501005E5906 /* MGToastUtils.swift in Sources */,
 				B8B8BC682068E4D2005E5906 /* AppDelegate.swift in Sources */,
 				B8B8BC8A2068E501005E5906 /* MGDateUtils.swift in Sources */,
+				B82A0BC82089C5FA00766395 /* MGCameraUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
