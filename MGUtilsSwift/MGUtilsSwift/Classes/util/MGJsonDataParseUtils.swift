@@ -25,26 +25,35 @@ public class MGJsonDataParseUtils {
     }
 
     /*
-     //序列化, 將物件變成json字串
+     序列化, 將物件變成json data
      JSONSerialization能將JSON轉換成Foundation，也能將Foundation轉換成JSON，但轉換成JSON有以下限制
-     1，最外層必須是Array禍Dictionary
-     2，所有的Object必须是String、Number、Array、Dictionary、Nil的实例
+     1，最外層必須是Array或Dictionary
+     2，所有的Object必須是 String、Number、Array、Dictionary、Nil 的 instance
      3，所有Dictionary的key必須是String
      4，數字不能是無窮或非數值
      */
-    public static func serialize(_ data: Any) -> String? {
+    public static func serializeData(_ data: Any) -> Data? {
         //首先檢查是否能序列化
         if !JSONSerialization.isValidJSONObject(data) { return nil }
-        //利用自帶的json工具轉乘json字串
+        //利用自帶的json工具轉json字串
         //如果設置options为JSONSerialization.WritingOptions.prettyPrinted，則印出來的格式更好閱讀
         if let data = try? JSONSerialization.data(withJSONObject: data, options: []) {
+            return data
+        }
+        return nil
+    }
+
+    /*
+     序列化, 將物件變成json字串
+     */
+    public static func serializeString(_ data: Any) -> String? {
+        if let data = serializeData(data) {
             //Data轉String
             let str = String(data: data, encoding: String.Encoding.utf8)
             return str
         }
         return nil
     }
-
 
     //將字串轉為 Data
     private static func converToData(_ string: String) -> Data? {
