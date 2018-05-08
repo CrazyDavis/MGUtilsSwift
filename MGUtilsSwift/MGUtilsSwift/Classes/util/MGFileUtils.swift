@@ -15,27 +15,36 @@ public class MGFileUtils {
     //預設的儲存資料夾, 所有api也都存在這裡
     public static var documentDir: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 
+    //寫入字串, 帶入檔案跟路徑
     public static func write(_ name: String, content: String, path: URL = documentDir) {
         let p = path.appendingPathComponent(name)
+        write(p, content: content)
+    }
 
+    //寫入字串, 直接帶入url
+    public static func write(_ url: URL, content: String) {
         do {
-            try content.write(to: p, atomically: false, encoding: String.Encoding.utf8)
-            print("寫入檔案成功: \n 檔名: \(name) \n路徑: \(path)\(name)")
+            try content.write(to: url, atomically: false, encoding: String.Encoding.utf8)
+            print("寫入檔案成功: \n 檔名: \(url.lastPathComponent) \n路徑: \(url.absoluteString)")
         } catch {
-            print("寫入檔案失敗: \n 檔名: \(name) \n 路徑: \(path)\(name)")
+            print("寫入檔案失敗: \n 檔名: \(url.lastPathComponent) \n路徑: \(url.absoluteString)")
         }
     }
 
-
+    //讀取檔案內容, 帶入路徑跟檔名
     public static func read(_ name: String, path: URL = documentDir) -> String? {
         let p = path.appendingPathComponent(name)
+        return read(p)
+    }
+
+    //讀取檔案內容, 直接帶入url
+    public static func read(_ url: URL) -> String? {
         var t: String?
-        //reading
         do {
-            t = try String(contentsOf: p, encoding: String.Encoding.utf8)
-            print("讀取檔案成功: \n 檔名: \(name) \n路徑: \(path)\(name)")
+            t = try String(contentsOf: url, encoding: String.Encoding.utf8)
+            print("讀取檔案成功: \n 檔名: \(url.lastPathComponent) \n路徑: \(url.absoluteString)")
         } catch {
-            print("讀取檔案失敗: \n 檔名: \(name) \n路徑: \(path)\(name)")
+            print("讀取檔案失敗: \n 檔名: \(url.lastPathComponent) \n路徑: \(url.absoluteString)")
         }
         return t
     }
