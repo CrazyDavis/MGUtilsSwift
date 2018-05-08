@@ -20,11 +20,8 @@ public class MGJsonDataParseUtils {
             return nil
         }
 //        print("印出jsonString = \(jsonString), 印出json = \(json.dictionary)")
-        if let typeGeneric = deserialize as? MGJsonDeserializeDelegate.Type {
-            let ins = typeGeneric.init(json)
-            return ins as AnyObject
-        }
-        return nil
+        let ins = deserialize.init(json)
+        return ins as AnyObject
     }
 
     /*
@@ -36,12 +33,12 @@ public class MGJsonDataParseUtils {
      4，數字不能是無窮或非數值
      */
     public static func serialize(_ data: Any) -> String? {
-        //先檢查能否有效反序列化
+        //首先檢查是否能序列化
         if !JSONSerialization.isValidJSONObject(data) { return nil }
         //利用自帶的json工具轉乘json字串
-        //如果设置options为JSONSerialization.WritingOptions.prettyPrinted，則印出來的格式更好閱讀
+        //如果設置options为JSONSerialization.WritingOptions.prettyPrinted，則印出來的格式更好閱讀
         if let data = try? JSONSerialization.data(withJSONObject: data, options: []) {
-            //Data转换成String打印输出
+            //Data轉String
             let str = String(data: data, encoding: String.Encoding.utf8)
             return str
         }
@@ -55,7 +52,7 @@ public class MGJsonDataParseUtils {
     }
 
     //將字串轉為JSON
-    private static func converToJSON(_ string: String) -> JSON? {
+    public static func converToJSON(_ string: String) -> JSON? {
         if let dataFromString = MGJsonDataParseUtils.converToData(string) {
             let j = JSON(dataFromString)
             if !j.isEmpty {
