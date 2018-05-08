@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AVFoundation
+//import AVFoundation
 
 //2018.05.08: 相關物件需要ios10, 但此專案最低支援ios9, 因此暫時註解, 之後再慢慢改
 class MGCameraUtils {
