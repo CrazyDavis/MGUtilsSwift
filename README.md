@@ -1,6 +1,8 @@
 # MGUtilsSwift
 
-![](https://img.shields.io/cocoapods/v/MGUtilsSwift.svg?style=flat)
+![](https://img.shields.io/cocoapods/v/MGUtilsSwift.svg?style=flat) 
+![](https://img.shields.io/badge/platform-ios-lightgrey.svg) 
+![](https://img.shields.io/badge/language-swift-orange.svg)  
 
 所有蒐集的工具類
 
