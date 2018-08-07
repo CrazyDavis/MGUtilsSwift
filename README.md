@@ -1,4 +1,7 @@
 # MGUtilsSwift
+
+![](https://img.shields.io/cocoapods/v/MGUtilsSwift.svg?style=flat)
+
 All Utils
 
 版本功能:
@@ -6,4 +9,4 @@ All Utils
 
 使用方式:  
 
-pod 'MGUtilsSwift', '~> 0.1.3'
+pod 'MGUtilsSwift', '~> {version}'
