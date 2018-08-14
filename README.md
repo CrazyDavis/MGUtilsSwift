@@ -13,4 +13,4 @@
 
 ### Cocoapods
 pod 'MGUtilsSwift', '~> {version}'  
-( 其中 {version} 請自行替入此版號 - ![](https://img.shields.io/cocoapods/v/MGUtilsSwift.svg?style=flat)  )  
+( 其中 {version} 請自行替入此版號 ![](https://img.shields.io/cocoapods/v/MGUtilsSwift.svg?style=flat)  )  
