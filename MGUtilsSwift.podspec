@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MGUtilsSwift"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "All Utils"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    All Utils
                    DESC
 
-  s.homepage     = "https://github.com/CrazyDavis/MGUtilsSwift"
+  s.homepage     = "https://github.com/MagicalWater/MGUtilsSwift"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/CrazyDavis/MGUtilsSwift.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/MagicalWater/MGUtilsSwift.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -137,7 +137,7 @@ Pod::Spec.new do |s|
   s.dependency 'Kingfisher', '~> 4.0'
   s.dependency 'SwiftyJSON'
   s.dependency 'Toast-Swift', '~> 3.0.1'
-  s.dependency 'CLImagePickerTool'
+  s.dependency 'CLImagePickerTool', '~> 2.3.1'
   s.dependency 'ReachabilitySwift'
 
 end

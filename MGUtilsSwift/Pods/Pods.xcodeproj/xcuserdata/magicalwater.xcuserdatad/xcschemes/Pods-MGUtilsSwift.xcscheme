@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88016F352F9B478D1386DEAC75B68F46"
+               BlueprintIdentifier = "E4AA3E3CB0CE80CAECE729FD733B8FDF"
                BuildableName = "Pods_MGUtilsSwift.framework"
                BlueprintName = "Pods-MGUtilsSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "88016F352F9B478D1386DEAC75B68F46"
+            BlueprintIdentifier = "E4AA3E3CB0CE80CAECE729FD733B8FDF"
             BuildableName = "Pods_MGUtilsSwift.framework"
             BlueprintName = "Pods-MGUtilsSwift"
             ReferencedContainer = "container:Pods.xcodeproj">

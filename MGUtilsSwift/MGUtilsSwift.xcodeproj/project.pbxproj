@@ -167,7 +167,6 @@
 				B8B8BC612068E4D2005E5906 /* Frameworks */,
 				B8B8BC622068E4D2005E5906 /* Resources */,
 				5E282AEC431B4128F7C462FF /* [CP] Embed Pods Frameworks */,
-				97F2012DBB3F759E6BA96F0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,21 +251,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MGUtilsSwift/Pods-MGUtilsSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		97F2012DBB3F759E6BA96F0F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MGUtilsSwift/Pods-MGUtilsSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2D6483A023F3E9D82266E9C /* [CP] Check Pods Manifest.lock */ = {
