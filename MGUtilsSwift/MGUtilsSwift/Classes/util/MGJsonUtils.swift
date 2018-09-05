@@ -12,6 +12,11 @@ import SwiftyJSON
 public class MGJsonUtils {
 
     private init() {}
+    
+    //反序列化, 將json變成物件
+    public static func deserialize<T: MGJsonDeserializeDelegate>(_ jsonString: String) -> T? {
+        return deserialize(jsonString, deserialize: T.self)
+    }
 
     //反序列化, 將json變成物件
     public static func deserialize<T: MGJsonDeserializeDelegate>(_ jsonString: String, deserialize: T.Type) -> T? {
