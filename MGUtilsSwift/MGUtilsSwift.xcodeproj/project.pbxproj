@@ -11,6 +11,7 @@
 		B82651C320A159D900FF4BE7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B82651C220A159D900FF4BE7 /* README.md */; };
 		B82651C520A159DF00FF4BE7 /* MGUtilsSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B82651C420A159DE00FF4BE7 /* MGUtilsSwift.podspec */; };
 		B82A0BC82089C5FA00766395 /* MGCameraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A0BC72089C5FA00766395 /* MGCameraUtils.swift */; };
+		B8400392213F9B6300282E11 /* MGResourceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8400391213F9B6300282E11 /* MGResourceUtils.swift */; };
 		B8B8BC682068E4D2005E5906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC672068E4D2005E5906 /* AppDelegate.swift */; };
 		B8B8BC6A2068E4D2005E5906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC692068E4D2005E5906 /* ViewController.swift */; };
 		B8B8BC6D2068E4D2005E5906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B8BC6B2068E4D2005E5906 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		B82651C220A159D900FF4BE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		B82651C420A159DE00FF4BE7 /* MGUtilsSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MGUtilsSwift.podspec; path = ../../MGUtilsSwift.podspec; sourceTree = "<group>"; };
 		B82A0BC72089C5FA00766395 /* MGCameraUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCameraUtils.swift; sourceTree = "<group>"; };
+		B8400391213F9B6300282E11 /* MGResourceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGResourceUtils.swift; sourceTree = "<group>"; };
 		B8B8BC642068E4D2005E5906 /* MGUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8BC672068E4D2005E5906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8B8BC692068E4D2005E5906 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				B8B8BC872068E501005E5906 /* MGToastUtils.swift */,
 				B8B8BC882068E501005E5906 /* MGTransformUtils.swift */,
 				B82A0BC72089C5FA00766395 /* MGCameraUtils.swift */,
+				B8400391213F9B6300282E11 /* MGResourceUtils.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				B8B8BC682068E4D2005E5906 /* AppDelegate.swift in Sources */,
 				B8B8BC8A2068E501005E5906 /* MGDateUtils.swift in Sources */,
 				B82A0BC82089C5FA00766395 /* MGCameraUtils.swift in Sources */,
+				B8400392213F9B6300282E11 /* MGResourceUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
