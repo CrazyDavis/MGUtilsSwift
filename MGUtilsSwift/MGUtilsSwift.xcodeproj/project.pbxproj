@@ -21,7 +21,7 @@
 		B8B8BC8A2068E501005E5906 /* MGDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC7C2068E501005E5906 /* MGDateUtils.swift */; };
 		B8B8BC8B2068E501005E5906 /* MGFileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC7D2068E501005E5906 /* MGFileUtils.swift */; };
 		B8B8BC8C2068E501005E5906 /* MGImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC7E2068E501005E5906 /* MGImageUtils.swift */; };
-		B8B8BC8D2068E501005E5906 /* MGJsonDataParseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC7F2068E501005E5906 /* MGJsonDataParseUtils.swift */; };
+		B8B8BC8D2068E501005E5906 /* MGJsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC7F2068E501005E5906 /* MGJsonUtils.swift */; };
 		B8B8BC8E2068E501005E5906 /* MGNetworkDetectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC802068E501005E5906 /* MGNetworkDetectUtils.swift */; };
 		B8B8BC8F2068E501005E5906 /* MGPhotoPickerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC812068E501005E5906 /* MGPhotoPickerUtils.swift */; };
 		B8B8BC902068E501005E5906 /* MGProportionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8BC822068E501005E5906 /* MGProportionUtils.swift */; };
@@ -52,7 +52,7 @@
 		B8B8BC7C2068E501005E5906 /* MGDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDateUtils.swift; sourceTree = "<group>"; };
 		B8B8BC7D2068E501005E5906 /* MGFileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGFileUtils.swift; sourceTree = "<group>"; };
 		B8B8BC7E2068E501005E5906 /* MGImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGImageUtils.swift; sourceTree = "<group>"; };
-		B8B8BC7F2068E501005E5906 /* MGJsonDataParseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGJsonDataParseUtils.swift; sourceTree = "<group>"; };
+		B8B8BC7F2068E501005E5906 /* MGJsonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGJsonUtils.swift; sourceTree = "<group>"; };
 		B8B8BC802068E501005E5906 /* MGNetworkDetectUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNetworkDetectUtils.swift; sourceTree = "<group>"; };
 		B8B8BC812068E501005E5906 /* MGPhotoPickerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPhotoPickerUtils.swift; sourceTree = "<group>"; };
 		B8B8BC822068E501005E5906 /* MGProportionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGProportionUtils.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				B8B8BC7C2068E501005E5906 /* MGDateUtils.swift */,
 				B8B8BC7D2068E501005E5906 /* MGFileUtils.swift */,
 				B8B8BC7E2068E501005E5906 /* MGImageUtils.swift */,
-				B8B8BC7F2068E501005E5906 /* MGJsonDataParseUtils.swift */,
+				B8B8BC7F2068E501005E5906 /* MGJsonUtils.swift */,
 				B8B8BC802068E501005E5906 /* MGNetworkDetectUtils.swift */,
 				B8B8BC812068E501005E5906 /* MGPhotoPickerUtils.swift */,
 				B8B8BC822068E501005E5906 /* MGProportionUtils.swift */,
@@ -291,7 +291,7 @@
 				B8B8BC892068E501005E5906 /* MGAnimationUtils.swift in Sources */,
 				B8B8BC942068E501005E5906 /* MGTimerUtils.swift in Sources */,
 				B8B8BC922068E501005E5906 /* MGSettingUtils.swift in Sources */,
-				B8B8BC8D2068E501005E5906 /* MGJsonDataParseUtils.swift in Sources */,
+				B8B8BC8D2068E501005E5906 /* MGJsonUtils.swift in Sources */,
 				B8B8BC8B2068E501005E5906 /* MGFileUtils.swift in Sources */,
 				B8B8BC8E2068E501005E5906 /* MGNetworkDetectUtils.swift in Sources */,
 				B8B8BC952068E501005E5906 /* MGToastUtils.swift in Sources */,
