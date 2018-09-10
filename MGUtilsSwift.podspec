@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MGUtilsSwift"
-  s.version      = "0.1.7"
+  s.version      = "0.1.8"
   s.summary      = "All Utils"
 
   s.description  = <<-DESC
