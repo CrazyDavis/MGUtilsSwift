@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MGUtilsSwift"
-  s.version      = "0.1.8"
+  s.version      = "0.1.9"
   s.summary      = "All Utils"
 
   s.description  = <<-DESC
@@ -43,5 +43,6 @@ Pod::Spec.new do |s|
   s.dependency 'Toast-Swift', '~> 3.0.1'
   s.dependency 'CLImagePickerTool', '~> 2.3.1'
   s.dependency 'ReachabilitySwift'
+  s.dependency 'Ipify'
 
 end

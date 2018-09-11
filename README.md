@@ -7,6 +7,7 @@
 所有蒐集的工具類  
 
 ## 版本
+0.1.9 - MGNetworkDetectUtils 新增 取得外部ip方法, getPublicIpAddress()
 0.1.8 - MGNetworkDetectUtils 新增 取得區網ip (非外部ip)
 0.1.7 - 新增 MGVersionUtils, 可用來比較版號, 更改 MGSettingUtils 的相關方法名稱
 0.1.6 - MGJsonDataParseUtils 更名為 MGJsonUtils, 反序列化方法增加泛型
