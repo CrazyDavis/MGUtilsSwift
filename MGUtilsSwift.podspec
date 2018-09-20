@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MGUtilsSwift"
-  s.version      = "0.1.9"
+  s.version      = "0.2.0"
   s.summary      = "All Utils"
 
   s.description  = <<-DESC
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency 'Kingfisher', '~> 4.0'
+  s.dependency 'Kingfisher', '~> 4.9.0'
   s.dependency 'SwiftyJSON'
   s.dependency 'Toast-Swift', '~> 3.0.1'
   s.dependency 'CLImagePickerTool', '~> 2.3.1'
