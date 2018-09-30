@@ -38,10 +38,10 @@ public class MGNetworkUtils: NSObject {
     }
     
     /*
-     GET 異步獲取
+     GET 異步
      */
     public func get(url: URL, params: [String : Any]?, paramEncoding: MGParamEncoding,
-                    headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
+                    headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)?) {
         do {
             let request = try generateRequest(url: url, params: params, paramEncoding: paramEncoding, headers: headers, method: .get)
             executeRequest(request: request, completeHandler: completeHandler)
@@ -52,9 +52,23 @@ public class MGNetworkUtils: NSObject {
     }
     
     /*
-     POST 異步獲取
+     GET 同步
      */
-    public func post(url: URL, params: [String : Any]?, paramEncoding: MGParamEncoding, headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
+    public func get(url: URL, params: [String : Any]?, paramEncoding: MGParamEncoding, headers: [String : String]?) -> MGNetworkResponse {
+        do {
+            let request = try generateRequest(url: url, params: params, paramEncoding: paramEncoding, headers: headers, method: .get)
+            return executeRequest(request: request)
+        } catch {
+            let response = MGNetworkResponse.init(data: nil, statusCode: nil, responseHeaders: nil, error: error)
+            return response
+        }
+    }
+    
+    /*
+     POST 異步
+     */
+    public func post(url: URL, params: [String : Any]?, paramEncoding: MGParamEncoding,
+                     headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)?) {
         do {
             let request = try generateRequest(url: url, params: params, paramEncoding: paramEncoding, headers: headers, method: .post)
             executeRequest(request: request, completeHandler: completeHandler)
@@ -65,20 +79,52 @@ public class MGNetworkUtils: NSObject {
     }
     
     /*
-     上傳 使用 POST
+     POST 同步
      */
-    public func upload(url: URL, datas: [MGNetworkUploadData], params: [String : Any]?, paramEncoding: MGParamEncoding,
-                       headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
-        let requestPair = generateUploadRequest(url: url, datas: datas, params: params, headers: headers)
-        executeUploadRequest(request: requestPair.0, data: requestPair.1)
+    public func post(url: URL, params: [String : Any]?, paramEncoding: MGParamEncoding, headers: [String : String]?) -> MGNetworkResponse {
+        do {
+            let request = try generateRequest(url: url, params: params, paramEncoding: paramEncoding, headers: headers, method: .post)
+            return executeRequest(request: request)
+        } catch {
+            let response = MGNetworkResponse.init(data: nil, statusCode: nil, responseHeaders: nil, error: error)
+            return response
+        }
     }
     
     /*
-     下載 使用 GET
+     上傳 POST 異步
      */
-    public func download(url: URL, destination: URL, params: [String : Any]?, headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
+    public func upload(url: URL, datas: [MGNetworkUploadData],
+                       params: [String : Any]?, paramEncoding: MGParamEncoding,
+                       headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)?) {
+        let requestPair = generateUploadRequest(url: url, datas: datas, params: params, headers: headers)
+        executeUploadRequest(request: requestPair.0, data: requestPair.1, completeHandler: completeHandler)
+    }
+    
+    /*
+     上傳 POST 同步
+     */
+    public func upload(url: URL, datas: [MGNetworkUploadData],
+                       params: [String : Any]?, paramEncoding: MGParamEncoding,
+                       headers: [String : String]?) -> MGNetworkResponse {
+        let requestPair = generateUploadRequest(url: url, datas: datas, params: params, headers: headers)
+        return executeUploadRequest(request: requestPair.0, data: requestPair.1)
+    }
+    
+    /*
+     下載 GET 異步
+     */
+    public func download(url: URL, destination: URL, params: [String : Any]?, headers: [String : String]?, completeHandler: ((MGNetworkResponse) -> Void)?) {
         let request = generateDownloadRequest(url: url, params: params, headers: headers)
         executeDownloadRequest(request: request, destination: destination, completeHandler: completeHandler)
+    }
+    
+    /*
+     下載 GET 同步
+     */
+    public func download(url: URL, destination: URL, params: [String : Any]?, headers: [String : String]?) -> MGNetworkResponse {
+        let request = generateDownloadRequest(url: url, params: params, headers: headers)
+        return executeDownloadRequest(request: request, destination: destination)
     }
     
     private func handleResponse(data: Data?, response: URLResponse?, error: Error?) -> MGNetworkResponse {
@@ -377,43 +423,80 @@ extension MGNetworkUtils: URLSessionDownloadDelegate {
 //執行任務
 extension MGNetworkUtils {
     
+    //異步
     //執行一般 request, 使用獲取資料的 URLSession
-    private func executeRequest(request: URLRequest, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
+    private func executeRequest(request: URLRequest, completeHandler: ((MGNetworkResponse) -> Void)?) {
         let getTask = URLSession.shared.dataTask(with: request) { data, response, error in
             let connectResponse = self.handleResponse(data: data, response: response, error: error)
             completeHandler?(connectResponse)
-//            if let connectResponse = self.handleResponse(data: data, response: response, error: error) {
-//                completeHandler?(connectResponse)
-//            }
         }
-        
         getTask.resume()
     }
     
+    //同步
+    //執行一般任務
+    private func executeRequest(request: URLRequest) -> MGNetworkResponse {
+        var connectResponse: MGNetworkResponse!
+        let semaphore = DispatchSemaphore(value: 0) //使用信標, 等到 handler 執行完畢才發送信標, 藉此達到同步
+        let getTask = URLSession.shared.dataTask(with: request) { data, response, error in
+            connectResponse = self.handleResponse(data: data, response: response, error: error)
+            semaphore.signal()
+        }
+        getTask.resume()
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return connectResponse
+    }
+    
+    //異步
     //執行下載任務
-    private func executeDownloadRequest(request: URLRequest, destination: URL, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
+    private func executeDownloadRequest(request: URLRequest, destination: URL, completeHandler: ((MGNetworkResponse) -> Void)?) {
         let downloadTask = downloadSession.downloadTask(with: request) { fileURL, response, error in
             self.donwloadingTask.removeValue(forKey: request)
             let connectResponse = self.handleResponse(data: nil, response: response, error: error)
             completeHandler?(connectResponse)
-//            if let connectResponse = self.handleResponse(data: nil, response: response, error: error) {
-//                completeHandler?(connectResponse)
-//            }
         }
         donwloadingTask[request] = (destination, downloadTask)
         downloadTask.resume()
     }
     
+    //同步
+    //執行下載任務
+    private func executeDownloadRequest(request: URLRequest, destination: URL) -> MGNetworkResponse {
+        var connectResponse: MGNetworkResponse!
+        let semaphore = DispatchSemaphore(value: 0) //使用信標, 等到 handler 執行完畢才發送信標, 藉此達到同步
+        let downloadTask = downloadSession.downloadTask(with: request) { fileURL, response, error in
+            self.donwloadingTask.removeValue(forKey: request)
+            connectResponse = self.handleResponse(data: nil, response: response, error: error)
+            semaphore.signal()
+        }
+        donwloadingTask[request] = (destination, downloadTask)
+        downloadTask.resume()
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return connectResponse
+    }
+    
+    //異步
     //執行上傳任務
-    private func executeUploadRequest(request: URLRequest, data: Data, completeHandler: ((MGNetworkResponse) -> Void)? = nil) {
+    private func executeUploadRequest(request: URLRequest, data: Data, completeHandler: ((MGNetworkResponse) -> Void)?) {
         let uploadTask = URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
             let connectResponse = self.handleResponse(data: data, response: response, error: error)
             completeHandler?(connectResponse)
-//            if let connectResponse = self.handleResponse(data: data, response: response, error: error) {
-//                completeHandler?(connectResponse)
-//            }
         }
         uploadTask.resume()
+    }
+    
+    //同步
+    //執行上傳任務
+    private func executeUploadRequest(request: URLRequest, data: Data) -> MGNetworkResponse {
+        var connectResponse: MGNetworkResponse!
+        let semaphore = DispatchSemaphore(value: 0) //使用信標, 等到 handler 執行完畢才發送信標, 藉此達到同步
+        let uploadTask = URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
+            connectResponse = self.handleResponse(data: data, response: response, error: error)
+            semaphore.signal()
+        }
+        uploadTask.resume()
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return connectResponse
     }
 }
 
