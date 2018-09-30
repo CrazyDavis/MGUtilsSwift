@@ -19,5 +19,197 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/MGNetworkDetectUtils.swift"
+            timestampString = "559981210.682719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getPublicIpAddress(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MGUtilsSwift.MGNetworkDetectUtils.getPublicIpAddress(handler: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MGUtilsSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magicalwater/iOSProjects/MGUtilsSwift/MGUtilsSwift/MGUtilsSwift/Classes/util/MGNetworkDetectUtils.swift"
+                  timestampString = "559980864.9547729"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "213">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MGUtilsSwift.MGNetworkResponse) -&gt; () in MGUtilsSwift.MGNetworkDetectUtils.getPublicIpAddress(handler: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MGUtilsSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magicalwater/iOSProjects/MGUtilsSwift/MGUtilsSwift/MGUtilsSwift/Classes/util/MGNetworkDetectUtils.swift"
+                  timestampString = "559980864.9572541"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.6832269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "get(url:params:paramEncoding:headers:completeHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.683309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "get(url:params:paramEncoding:headers:completeHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.6833791"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
+            landmarkName = "executeRequest(request:completeHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MGUtilsSwift.MGNetworkUtils.(executeRequest in _31B926EEACF44C91D0DE786996E45BC1)(request: Foundation.URLRequest, completeHandler: Swift.Optional&lt;(MGUtilsSwift.MGNetworkResponse) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MGUtilsSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magicalwater/iOSProjects/MGUtilsSwift/MGUtilsSwift/MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+                  timestampString = "559980818.873297"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "386"
+                  endingLineNumber = "386"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MGUtilsSwift.MGNetworkUtils.(executeRequest in _31B926EEACF44C91D0DE786996E45BC1)(request: Foundation.URLRequest, completeHandler: Swift.Optional&lt;(MGUtilsSwift.MGNetworkResponse) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MGUtilsSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magicalwater/iOSProjects/MGUtilsSwift/MGUtilsSwift/MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+                  timestampString = "559980818.875827"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "386"
+                  endingLineNumber = "386"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.683445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
+            landmarkName = "MGNetworkUtils"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.683504"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "handleResponse(data:response:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.6835721"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "get(url:params:paramEncoding:headers:completeHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MGUtilsSwift/Classes/util/network/MGNetworkUtils.swift"
+            timestampString = "559981210.683656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "get(url:params:paramEncoding:headers:completeHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

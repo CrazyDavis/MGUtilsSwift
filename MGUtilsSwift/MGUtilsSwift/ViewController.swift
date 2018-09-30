@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var previewView: UIView!
+    
+    var util = MGNetworkDetectUtils()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,6 +25,9 @@ class ViewController: UIViewController {
 //                MGToastUtils.show("開啟相機錯誤 \(err!.localizedDescription)")
 //            }
 //        }
+        
+        util.getPublicIpAddress {_ in 
+        }
     }
 
     override func didReceiveMemoryWarning() {
